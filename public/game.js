@@ -908,7 +908,7 @@ class Game {
         this.player.action = "Running";
       }
     }
-
+ 
     if (this.player.motion !== undefined) this.player.move(dt);
 
     if (
