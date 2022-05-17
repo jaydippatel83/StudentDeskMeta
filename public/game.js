@@ -479,14 +479,38 @@ class Game {
       }
     });
   }
+  // loadCubeStadium(gltf, game) {
+  //   let pos = 2000;
+  //   for (let i = 1; i <= 1; i++) {
+  //     const loader = new THREE.TextureLoader();
+  //     // loader.setCrossOrigin('')
+  //     const mapOverlay = loader.load(game.imagesStadium[i]);
+  //     let dice = new THREE.Mesh(
+  //       new THREE.BoxGeometry(5000, 3000, 1, 1, 1, 1),
+
+  //       new THREE.MeshLambertMaterial({
+  //         map: mapOverlay,
+  //       })
+  //     );
+  //     dice.position.set(
+  //       gltf.scene.position.x + pos,
+  //       gltf.scene.position.x - pos,
+  //       // gltf.scene.position.y,
+  //       gltf.scene.position.z - 3000
+  //     );
+  //     game.scene.add(dice);
+  //     pos += 220;
+  //   }
+  // }
+
   loadCubeStadium(gltf, game) {
-    let pos = 2000;
-    for (let i = 1; i <= 1; i++) {
+    let pos = 200;
+    for (let i = 0; i < 4; i++) {
       const loader = new THREE.TextureLoader();
       // loader.setCrossOrigin('')
       const mapOverlay = loader.load(game.imagesStadium[i]);
       let dice = new THREE.Mesh(
-        new THREE.BoxGeometry(5000, 3000, 1, 1, 1, 1),
+        new THREE.BoxGeometry(200, 500, 200, 1, 1, 1),
 
         new THREE.MeshLambertMaterial({
           map: mapOverlay,
@@ -494,9 +518,8 @@ class Game {
       );
       dice.position.set(
         gltf.scene.position.x + pos,
-        gltf.scene.position.x - pos,
-        // gltf.scene.position.y,
-        gltf.scene.position.z - 3000
+        gltf.scene.position.y,
+        gltf.scene.position.z
       );
       game.scene.add(dice);
       pos += 220;
