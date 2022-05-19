@@ -1,5 +1,6 @@
-const serverUrl = "https://dnydgszkkoqd.usemoralis.com:2053/server";
-const appId = "xYBnSyYrWFqQJD93kro1zScUih8OWiOKyFPPvYsX";
+const serverUrl = "https://4vhrdliui0o0.usemoralis.com:2053/server";
+const appId = "NJ1W87vymMj9zzQlqMtkzozp1mCyLfu3DBIa7QLr";
+
 Moralis.start({ serverUrl, appId });
 
 const NORTH = 1,
@@ -530,6 +531,7 @@ class Game {
     let pos = 200;
     for (let i = 0; i < 4; i++) {
       const loader = new THREE.TextureLoader();
+      console.log(game.imagesMarket[i],"image");
       const mapOverlay = loader.load(game.imagesMarket[i]);
       let dice = new THREE.Mesh(
         new THREE.BoxGeometry(200, 500, 200, 1, 1, 1),
